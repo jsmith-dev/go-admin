@@ -57,7 +57,8 @@ func IsEditUrl(s string, p string) bool {
 }
 
 func Uuid() string {
-	return uuid.NewV4().String()
+	u, _ := uuid.NewV4()
+	return u.String()
 }
 
 func SetDefault(source, def string) string {
